@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Bookstore Manager</h1>
+            <button class="add-button" id="add-book-btn">Add Book</button>
+        </header>
+
+        <main>
+            <div class="book-list" id="book-list">
+                <!-- Sample book items -->
+                <div class="book-item">
+                    <div class="book-info">
+                        <h3 class="book-title">The Great Gatsby</h3>
+                        <p class="book-details">F. Scott Fitzgerald - 1925</p>
+                    </div>
+                    <div class="book-actions">
+                        <button class="edit-btn" data-book-id="1">Edit</button>
+                        <button class="delete-btn" data-book-id="1">Delete</button>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <div class="book-info">
+                        <h3 class="book-title">To Kill a Mockingbird</h3>
+                        <p class="book-details">Harper Lee - 1960</p>
+                    </div>
+                    <div class="book-actions">
+                        <button class="edit-btn" data-book-id="2">Edit</button>
+                        <button class="delete-btn" data-book-id="2">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Book Form Overlay -->
+        <div class="form-overlay" id="book-form-overlay">
+            <div class="book-form">
+                <div class="form-header">
+                    <h2 id="form-title">Add Book</h2>
+                    <span class="close-btn" id="close-form-btn">&times;</span>
+                </div>
+                <form id="book-form">
+                    <input type="hidden" id="book-id" name="id">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Publication Year</label>
+                        <input type="number" id="year" name="year" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Save Book</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
